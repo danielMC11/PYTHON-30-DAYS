@@ -399,4 +399,7 @@ print(first_ten)
 last_ten = list(filter(get_last_ten_countries, countries_list))
 print(last_ten)
 
-from countriesData import countries_data
+
+
+
+
