@@ -67,5 +67,5 @@ except Exception as error:
     print(f'Error: {error} ', f'Type of Error: {type(error)}', sep='\n')
 """
 
-print('Hola Mundo')
+
 
