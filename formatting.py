@@ -4,6 +4,7 @@ b = 2
 print('%s + %s = %s' %(a, b, a+b))
 print('{} + {} = {}'.format(a, b, a+b))
 print(f'{a} + {b} = {a+b}')
+#embeding a str in a str must be interchangeable: f' text {" ".join()}' or f" text {' ',join()}"
 """
 """
 #unpacking a sequence into single character
