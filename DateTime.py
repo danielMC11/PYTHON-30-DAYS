@@ -10,11 +10,12 @@ minute = rightnow.minute
 second = rightnow.second
 print(f'{year}/{month}/{day} {hour}:{minute}:{second}')
 
-full_time = rightnow.strftime('%Y/%m/%d %H:%M:%S Today is: %A')
+full_time = rightnow.strftime('%Y/%m/%d %H:%M:%S Today is: %a')
 print(full_time)
 
-str_date = 'Today is Tuesday of 14 March 2023'
-print(datetime.strptime(str_date, 'Today is %A of %d %B %Y'))
+str_date = 'a Tuesday'
+var = datetime.strptime(str_date, 'a %A')
+print(var)
 
 d = date(2003, 11, 19)  # date
 print('My Date ', d)

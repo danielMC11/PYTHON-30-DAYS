@@ -46,7 +46,13 @@ def unpack_kw(a, b):
     print(type(a), type(b))
 
 
-pack_kw(a=1, b=2)
+#pack_kw(a=1, b=2)
+import re
+
+t = 'Hola.'
+p = r'^[Hh]ola[.\s]|[.\s][Hh]ola[.\s]|^[Hh]ola$|[.\s][Hh]ola$'
+obj = re.match(p, t)
+print(obj)
 
 """
 pack(1, 2, 3, 4, 5)

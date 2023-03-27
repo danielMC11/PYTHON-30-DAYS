@@ -1,6 +1,24 @@
 {
-       "name": "Daniel",
-       "age": 19,
-       "Country": "Colombia",
-       "skills": []
+    "name": "Camilo",
+    "age": 19,
+    "Country": "Colombia",
+    "skills": [
+        "Python",
+        "C++",
+        "Python",
+        "C++",
+        "Python",
+        "C++",
+        "Python",
+        "C++"
+    ],
+    "Languages": [
+        "Spanish",
+        "English"
+    ],
+    "music-tastes": [
+        "nu-metal",
+        "indie",
+        "hip-hop"
+    ]
 }
