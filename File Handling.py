@@ -190,7 +190,7 @@ for year_tag in root.iter('year'):
     print(year_tag.tag, year_tag.text)
 
 for country in root.findall('country'):
-    if country.get('name') == 'Li echtenstein':
+    if country.get('name') == 'Liechtenstein':
         country.set('continent', 'europe')
     elif country.get('name') == 'Singapore':
         country.set('continent', 'asia')

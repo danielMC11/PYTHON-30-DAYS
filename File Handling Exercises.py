@@ -14,9 +14,8 @@ with open('obama_speech.txt', mode='r') as file:
 """
 import re
 
-"""
 import re
-
+"""
 
 def extract_list_patterns(funct):
     def wrapper(*args):
@@ -110,7 +109,6 @@ with open('email_exchanges_big.txt', mode='r') as file:
 with open('mails.txt', mode='w') as f:
     lines_mails = '\n'.join(mails)
     f.write(lines_mails)
-
 """
 
 """

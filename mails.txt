@@ -79,7 +79,7 @@ sleepers.mail.umich.edu
 panther.mail.umich.edu
 fan.mail.umich.edu
 mission.mail.umich.edu
-godse^nd.mail.umich.edu
+godsend.mail.umich.edu
 faithful.mail.umich.edu
 AB
 casino.mail.umich.edu
