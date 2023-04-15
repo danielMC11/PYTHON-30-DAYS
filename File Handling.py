@@ -171,12 +171,11 @@ xml_str = '''<?xml version="1.0"?>
 root = ET.fromstring(xml_str)
 """
 
-"""
 import xml.etree.ElementTree as ET
 
 tree = ET.parse('Countries.xml')
 root = tree.getroot()
-
+print(root.tag)
 for country in root.findall('country'):
     name = country.get('name')
     gdp = country.find('gdppc').text
@@ -197,10 +196,12 @@ for country in root.findall('country'):
     else:
         country.set('continent', 'south-america')
 
+for tag in root.iter():
+    print(tag.tag)
 
 #root.append(ET.SubElement(root, 'Country', {'name': 'Colombia', 'continent': 'south-america'}))
 
 tree.write('Countries.xml')
-"""
+
 
 

@@ -5,18 +5,18 @@
         <gdppc wealth="rich">141100</gdppc>
         <neighbor name="Austria" direction="E" />
         <neighbor name="Switzerland" direction="W" />
-    </country>
+    <language /></country>
     <country name="Singapore" continent="asia">
         <rank>4</rank>
         <year>2011</year>
         <gdppc wealth="rich">59900</gdppc>
         <neighbor name="Malaysia" direction="N" />
-    </country>
+        <language/></country>
     <country name="Panama" continent="south-america">
         <rank>68</rank>
         <year>2011</year>
         <gdppc wealth="poor">13600</gdppc>
         <neighbor name="Costa Rica" direction="W" />
         <neighbor name="Colombia" direction="E" />
-    </country>
+        <language /></country>
 </data>

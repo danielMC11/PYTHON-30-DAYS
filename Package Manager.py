@@ -14,6 +14,7 @@ words = ew.unique_words(response.text)
 print(len(words))
 """
 
+"""
 url = "https://api.thecatapi.com/v1/breeds"
 response = requests.get(url)
 
@@ -68,13 +69,14 @@ with open('cat_zero.json', mode='w') as f:      # From url, json str
 with open('cat_zero.json', mode='r') as f:
     list_cats_dicts = json.loads(f.read())
     weights = [extract_numbers(dicts['weight']['metric']) for dicts in list_cats_dicts]
-    print_statistics(weights)
+    #print_statistics(weights)
     lifespans = [extract_numbers(dicts['life_span']) for dicts in list_cats_dicts]
-    print_statistics(lifespans)
+    #print_statistics(lifespans)
     list_of_lists_table = breeds_per_country(list_cats_dicts)
 
+
 with open('cats_frequency_table.csv', mode='w', encoding='utf-8', newline='') as f:
-    writer = csv.writer(f, delimiter=';')
+    writer = csv.writer(f, delimiter=',')
     header = ['Country', 'Abs Frequency', 'Abs Frequency Acc', 'Rel Frequency', 'Percentage']
     writer.writerow(header)
     writer.writerows(list_of_lists_table)
@@ -88,3 +90,53 @@ with open('cats_frequency_table.csv', mode='w', encoding='utf-8', newline='') as
     total_row = ['', round(sum_abs_freq, 2), '', round(sum_rel_freq, 2), round(sum_percent, 2)]
     writer.writerow(total_row)
 
+"""
+from bs4 import BeautifulSoup
+
+html_doc = '''<html><head></head><body bgcolor="white">
+              <h1>Empanadas</h1>
+              <p class='xd'>Bienvenidos a mi negocio de empanadas :D</p>
+              <ul>
+                <li id='bru'>Carne</li>
+                <li>Pollo</li>
+                <li>Atun</li>
+              </ul>
+              <p id='bruh'>Otros negocios</p>
+              <ul>
+               <li><a href="pizzas.com">Pizzas web</a></li>
+               <li><a href="hamburguesas.com">Hamburguesas web</a></li>
+               <li><a href="perros.com">Perros web</a></li>
+              </body></html>
+              
+'''
+
+#soup = BeautifulSoup(html_doc, 'lxml')
+"""
+print(soup.html.name,
+      soup.find('h1').string,
+      soup.find('body').get('bgcolor'),
+      soup.find_all('a'),
+      soup.find('li', id='bru'),
+      [link.get('href') for link in soup.find_all('a')],
+      [link['href'] for link in soup.find_all('a')],
+      sep='\n'
+      )
+"""
+
+#with open('empanadas.html', mode='w', encoding='utf-8') as f:
+#   f.write(html_doc)
+
+#print(soup.prettify())
+"""
+import requests
+
+response = requests.get('https://archive.ics.uci.edu/ml/datasets.php')
+
+soup = BeautifulSoup(response.text, 'lxml')
+
+#print(soup.prettify())
+
+p_tags = soup.find_all('p')
+for i in p_tags:
+    i.string = 'QUESO CON BOCADILLO'
+"""
