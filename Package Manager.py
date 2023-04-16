@@ -93,24 +93,16 @@ with open('cats_frequency_table.csv', mode='w', encoding='utf-8', newline='') as
 """
 from bs4 import BeautifulSoup
 
-html_doc = '''<html><head></head><body bgcolor="white">
-              <h1>Empanadas</h1>
-              <p class='xd'>Bienvenidos a mi negocio de empanadas :D</p>
-              <ul>
-                <li id='bru'>Carne</li>
-                <li>Pollo</li>
-                <li>Atun</li>
-              </ul>
-              <p id='bruh'>Otros negocios</p>
-              <ul>
-               <li><a href="pizzas.com">Pizzas web</a></li>
-               <li><a href="hamburguesas.com">Hamburguesas web</a></li>
-               <li><a href="perros.com">Perros web</a></li>
-              </body></html>
-              
-'''
 
-#soup = BeautifulSoup(html_doc, 'lxml')
+with open('html_doc_pretty.html', mode='r+', encoding='utf-8') as f:
+    html_doc = f.read()
+
+soup = BeautifulSoup(html_doc, 'lxml')
+items_content = list()
+for ul_tags in soup.find_all('ul'):
+    for li_tags in ul_tags.find_all('li'):
+        items_content.append(li_tags.get_text(separator='', strip=True))
+print(items_content)
 """
 print(soup.html.name,
       soup.find('h1').string,
@@ -127,6 +119,7 @@ print(soup.html.name,
 #   f.write(html_doc)
 
 #print(soup.prettify())
+
 """
 import requests
 

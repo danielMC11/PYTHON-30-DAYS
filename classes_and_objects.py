@@ -13,7 +13,10 @@ class Person:
         self.name = name
 
 
-p1 = Person()
-p1.print_info()
-p1.change_name('BRo')
-p1.print_info()
+class Student(Person):
+    def __init__(self, name='Daniel', age=19, networth=0.01, country='Colombia', city='Villavicencio'):
+        super().__init__(name, age, networth, country, city)
+
+
+s1 = Student()
+s1.print_info()
